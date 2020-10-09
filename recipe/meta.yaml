@@ -1,5 +1,5 @@
 {% set name = "yaqd-pmc" %}
-{% set version = "2020.7.0" %}
+{% set version = "2020.10.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0a093b634e78a94c8bb0ff3ad5c12a48174e5448dc9aaf9a9e2385651dd8226f
+  sha256: 56f1121f519cc44791d17a5be6b0db098fd34370e32a5c21b1e364647e4f87fa
 
 build:
   number: 0
@@ -46,4 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - untzag
-    - ksunden 
+    - ksunden
