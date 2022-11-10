@@ -1,5 +1,5 @@
 {% set name = "yaqd-pmc" %}
-{% set version = "2022.6.0" %}
+{% set version = "2022.11.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6012deb214a321019a37580bdf0ee883c7e9fc50bfe7035270f3943e242c9d6c
+  sha256: d6dc3196de0ce20b64a181f1060e89b73cdf2efa96332f7fb8397bb4bbc8b72f
 
 build:
   number: 0
