@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d6dc3196de0ce20b64a181f1060e89b73cdf2efa96332f7fb8397bb4bbc8b72f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - yaqd-pmc = yaqd_pmc._pmc:PmcMotor.main
@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - flit
     - yaqd-core >=2020.10.1
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - yaqd-core >=2020.10.1
 
 test:
@@ -35,6 +35,7 @@ test:
     - yaqd-pmc --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://yaq.fyi
